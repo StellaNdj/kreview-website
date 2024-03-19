@@ -1,22 +1,23 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Homepage from "./pages/Homepage";
-import ReviewDetails from "./pages/ReviewDetails";
-import Header from "./components/Header";
+import ReviewDetails from './pages/ReviewDetails'
+import Homepage from './pages/Homepage'
+import Header from './components/Header'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header></Header>
-        <Routes>
+        <Switch>
           <Route exact path="/">
             <Homepage></Homepage>
           </Route>
           <Route path="/details/:id">
             <ReviewDetails></ReviewDetails>
           </Route>
-        </Routes>
+        </Switch>
       </div>
     </Router>
   );

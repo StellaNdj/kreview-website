@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 export default function ReviewDetails() {
-  return (
+  return(
     <div>ReviewDetails</div>
   )
 }
