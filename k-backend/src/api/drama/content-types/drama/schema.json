@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dramas",
+  "info": {
+    "singularName": "drama",
+    "pluralName": "dramas",
+    "displayName": "drama",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "required": true
+    },
+    "synopsis": {
+      "type": "blocks",
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
