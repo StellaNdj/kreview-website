@@ -9,14 +9,16 @@ export default function Homepage() {
   if (error) return <p>Error...</p>
   const fetchedData = data.data
   return(
-    <div>
+    <div className="drama-grid">
       {fetchedData.map(drama => (
-        <div key={drama.id} className="drama-card">
+        <div key={drama.id} className="homepage-drama-card">
           <img src={drama.attributes.cover} alt="drama cover" height={250} width={200}></img>
-          <h2 className="drama-title">{drama.attributes.title}</h2>
-          <p className="drama-rating">{drama.attributes.rating}</p>
-          <p className="drama-year">{drama.attributes.year}</p>
-          <Link to={`/dramas/${drama.id}`}>Read more</Link>
+          <h2 className="homepage-drama-title">{drama.attributes.title}</h2>
+          <div className="homepage-drama-infos">
+            <p className="homepage-drama-rating">{drama.attributes.rating}</p>
+            <p className="homepage-drama-year">{drama.attributes.year}</p>
+          </div>
+          <Link to={`/dramas/${drama.id}`}>More</Link>
         </div>
     ))}
     </div>
