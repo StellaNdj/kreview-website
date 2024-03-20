@@ -67,3 +67,16 @@ code {
   border-radius: 10%;
   margin-right: 10px;
 }
+
+/* View drama cards */
+
+.view-drama-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view-drama-card > img {
+  height: 350px;
+  width: 300px;
+  border-radius: 10%;
+}
+
