@@ -12,9 +12,10 @@ export default function Homepage() {
     <div>
       {fetchedData.map(drama => (
         <div key={drama.id} className="drama-card">
-          <div className="drama-rating">{drama.attributes.rating}</div>
+          <img src={drama.attributes.cover} alt="drama cover" height={250} width={200}></img>
           <h2 className="drama-title">{drama.attributes.title}</h2>
-          <p>{drama.attributes.synopsis[0].children[0].text}</p>
+          <p className="drama-rating">{drama.attributes.rating}</p>
+          <p className="drama-year">{drama.attributes.year}</p>
           <Link to={`/dramas/${drama.id}`}>Read more</Link>
         </div>
     ))}
