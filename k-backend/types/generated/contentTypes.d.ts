@@ -800,11 +800,16 @@ export interface ApiDramaDrama extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    cover: Attribute.Media;
     title: Attribute.String & Attribute.Required;
-    rating: Attribute.Integer & Attribute.Required;
+    rating: Attribute.Decimal & Attribute.Required;
     synopsis: Attribute.Blocks & Attribute.Required;
-    year: Attribute.Integer & Attribute.Required;
+    year: Attribute.BigInteger & Attribute.Required;
+    reviews: Attribute.Relation<
+      'api::drama.drama',
+      'oneToMany',
+      'api::review.review'
+    >;
+    cover: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -829,6 +834,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     singularName: 'review';
     pluralName: 'reviews';
     displayName: 'review';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -845,6 +851,13 @@ export interface ApiReviewReview extends Schema.CollectionType {
         number
       >;
     body: Attribute.Blocks & Attribute.Required;
+    avatar: Attribute.Media;
+    drama: Attribute.Relation<
+      'api::review.review',
+      'manyToOne',
+      'api::drama.drama'
+    >;
+    username: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

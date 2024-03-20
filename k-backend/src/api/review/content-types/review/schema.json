@@ -4,7 +4,8 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "review"
+    "displayName": "review",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,6 +25,24 @@
     },
     "body": {
       "type": "blocks",
+      "required": true
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "drama": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::drama.drama",
+      "inversedBy": "reviews"
+    },
+    "username": {
+      "type": "string",
       "required": true
     }
   }

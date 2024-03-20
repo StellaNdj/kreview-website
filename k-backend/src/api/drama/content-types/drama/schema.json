@@ -12,23 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "title": {
       "type": "string",
       "required": true
     },
     "rating": {
-      "type": "integer",
+      "type": "decimal",
       "required": true
     },
     "synopsis": {
@@ -36,8 +25,19 @@
       "required": true
     },
     "year": {
-      "type": "integer",
+      "type": "biginteger",
       "required": true
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "drama"
+    },
+    "cover": {
+      "type": "string",
+      "required": true,
+      "regex": "^(https?|ftp):\\/\\/[^\\s\\/$.?#].[^\\s]*$"
     }
   }
 }
