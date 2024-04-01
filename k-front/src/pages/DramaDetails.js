@@ -12,6 +12,7 @@ export default function DramaDetails() {
   const fetchedData = data.data
   const { attributes } = fetchedData;
 
+
   return(
     <div key={fetchedData.id} className="view-drama-card">
           <img src={attributes.cover} alt="drama cover"></img>
