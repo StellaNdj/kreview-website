@@ -74,6 +74,7 @@ code {
 .homepage-drama-infos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .homepage-drama-title {
@@ -88,14 +89,38 @@ code {
   margin-right: 10px;
 }
 
+.homepage-drama-link {
+  text-decoration: none;
+  margin: 15px;
+  padding: 0;
+  background-color: #3e55d5;
+  border-radius: 10%;
+  color: black;
+}
+
 /* View drama cards */
 
 .view-drama-card {
   display: flex;
-  flex-wrap: wrap;
 }
+
 .view-drama-card > img {
   height: 350px;
   width: 300px;
+  border-radius: 10%;
+  margin-right: 20px;
+}
+
+.view-drama-infos > h2 {
+  font-size: 20px;
+}
+
+.view-drama-ry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-drama-rating {
+  background-color: #3e55d5;
   border-radius: 10%;
 }

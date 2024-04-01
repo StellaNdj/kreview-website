@@ -17,7 +17,7 @@ export default function Homepage() {
           <div className="homepage-drama-infos">
             <p className="homepage-drama-rating">{drama.attributes.rating}</p>
             <p className="homepage-drama-year">{drama.attributes.year}</p>
-            <Link to={`/dramas/${drama.id}`}>More</Link>
+            <Link to={`/dramas/${drama.id}`} className="homepage-drama-link">More</Link>
           </div>
         </div>
     ))}
