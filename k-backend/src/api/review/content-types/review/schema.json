@@ -27,23 +27,16 @@
       "type": "blocks",
       "required": true
     },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "drama": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::drama.drama",
       "inversedBy": "reviews"
     },
-    "username": {
-      "type": "string",
-      "required": true
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
