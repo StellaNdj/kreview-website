@@ -63,10 +63,6 @@ code {
   max-width: 200px;
 }
 
-.homepage-drama-card > img {
-  border-radius: 10%;
-}
-
 .homepage-drama-card > a {
   color: black;
   text-align: end;
@@ -91,12 +87,20 @@ code {
 }
 
 .homepage-drama-link {
-  text-decoration: none;
+  color:#3e55d5;
   margin: 15px;
   padding: 0;
-  background-color: #3e55d5;
-  border-radius: 10%;
   color: black;
+}
+
+.homepage-drama-link-img {
+  text-decoration: none;
+}
+
+.homepage-drama-link-img > img {
+  border-radius: 10%;
+  height: 250px;
+  width: 200px;
 }
 
 /* View drama cards */
@@ -112,6 +116,10 @@ code {
   margin-right: 20px;
 }
 
+.view-drama-infos {
+  margin: 0 40px;
+}
+
 .view-drama-infos > h2 {
   font-size: 20px;
 }
@@ -124,4 +132,20 @@ code {
 .view-drama-rating {
   background-color: #3e55d5;
   border-radius: 10%;
+}
+
+.view-review-card {
+  padding: 10px 20px;
+  box-shadow: 0 1px 2px rgba(0.243, 0.333, 0.835, 0.2);
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+.view-review-card-title {
+  font-weight: bold;
+}
+
+.view-review-card-rd {
+  display: flex;
+  justify-content: space-between;
 }
